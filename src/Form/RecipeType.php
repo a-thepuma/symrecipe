@@ -8,6 +8,7 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class RecipeType extends AbstractType
 {
@@ -32,6 +33,9 @@ class RecipeType extends AbstractType
                 'multiple' => true,
                 'expanded' => true,
             ])
+            ->add('submit', SubmitType::class, [
+            'label' => 'Modifier la recette'
+        ]);
         ;
     }
 
