@@ -47,7 +47,11 @@
 									Modifier
 								</a>
 							</td>
-							<td>TODO</td>
+							<td>
+                                <a href="{{ path('recipe_remove', { id: recipe.id }) }}" class="btn btn-info">
+									Supprimer
+								</a>
+                            </td>
 						</tr>
 					{% endfor %}
 				</tbody>
